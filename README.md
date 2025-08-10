@@ -16,6 +16,9 @@ What started as a simple policy cloner has evolved into an integrated management
 <img width="2560" height="1352" alt="Screenshot 2025-08-09 at 10 19 51 PM" src="https://github.com/user-attachments/assets/120305ac-69c0-4a06-b7f4-ef3e77c16980" />
 
 
+<img width="817" height="891" alt="Screenshot 2025-08-10 145215" src="https://github.com/user-attachments/assets/c54e404c-cc28-478c-b41c-3b15371b69f0" />
+
+
 
 ✨ Key Features
 This tool is packed with intelligent features designed for real-world network administration scenarios:
