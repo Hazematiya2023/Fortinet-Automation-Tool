@@ -7,14 +7,12 @@
     Features advanced search by ID or Name/Address, and bulk actions like "Select All".
     All new objects are created in a 'disabled' state by default for safety.
 .NOTES
-    Author:  Hazem Mohamed -----> This script was enhanced by Google Gimini AI Pro
-    Version: 9.3 (Stabl)
+    Author:  Hazem Mohamed & Enhanced by Google Gimini
+    Version: 9.4 (Policy Route Fetch Fix)
     Developed by: Hazem Mohamed - Cybersecurity Engineer (hmohamed200@gmail.com)
     Requires: Posh-SSH module (Install-Module -Name Posh-SSH)
-    This Program was tested on Windows 11 Environment
 #>
-[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
-Install-Module -Name PowerShellGet -Force -AllowClobber -SkipPublisherCheck
+
 # Check for Posh-SSH module and install if missing
 if (-not (Get-Module -ListAvailable -Name Posh-SSH)) {
     Write-Host "Posh-SSH module not found. Attempting to install..."
@@ -62,9 +60,9 @@ function Load-ImageFromUrl {
         [string]$Url
     )
     try {
-        $webClient = New-Object System.Net.WebClient
-        # Required for TLS 1.2 used by many modern sites
+        # *** CHANGE: Enforce TLS 1.2 for compatibility with older systems ***
         [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]::Tls12
+        $webClient = New-Object System.Net.WebClient
         $imageData = $webClient.DownloadData($Url)
         $memoryStream = New-Object System.IO.MemoryStream($imageData)
         $PictureBox.Image = [System.Drawing.Image]::FromStream($memoryStream)
@@ -1362,7 +1360,7 @@ $mainForm.Add_Closing({
 $mainForm.Add_Load({
     # Load logos when the form loads
     Load-ImageFromUrl -PictureBox $fortinetLogoBox -Url "https://www.fortinet.com/content/dam/fortinet/images/logos/fortinet-logo-red.png"
-    Load-ImageFromUrl -PictureBox $freeMindLogoBox -Url "https://freemind-tech.com/wp-content/uploads/2024/11/FMT-Layerskkk-1.png"
+    Load-ImageFromUrl -PictureBox $freeMindLogoBox -Url "https://i.imgur.com/your-logo-url.png" # Replace with a stable URL for your logo
 })
 
 # Show the form
