@@ -1,7 +1,7 @@
 Advanced FortiGate Cloning & Management Tool
 
 ® Developed by Hazem Mohamed - Cybersecurity Engineer | LinkedIn: https://www.linkedin.com/in/hazem-mohamed-03742957/
-
+****This Tool was developed using my skills in PowerShell scripting and enhanced by Google Gemini Flash Pro 2.5****
 
 A powerful PowerShell GUI tool designed to streamline and automate the management of FortiGate firewalls. This tool transforms repetitive, time-consuming tasks into a few simple clicks, significantly boosting productivity and reducing the risk of human error.
 
